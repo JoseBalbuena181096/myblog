@@ -1,0 +1,34 @@
+<header style="margin-bottom: 30px;">
+    <div class="grid-x grid-margin-x header">
+        <div class="cell small-12 medium-4 large-3">
+            <img class="image-edit" src="http://drive.google.com/uc?export=view&id=1eFXUwHqNarmEhxYGHzPCw8kFr-_lpac4" style="height:80px;" alt="iron makers">
+            <a href="{% url 'home_app:index' %}"  style="font-size: 40px; color: #ffffff; font-family: 'Oswald', sans-serif;">
+                IRON MAKERS 
+            </a>
+        </div>
+        <div class="cell small-12 medium-4">
+            
+        </div>
+        <div class="cell small-12 large-5">
+            <ul class="menu" style="justify-content: flex-end;">
+                <li>
+                    <a href="{% url  'home_app:index' %}" class="menu-text" style="color: aliceblue; font-family: 'Oswald'">Inicio</a>
+                </li>
+                <li>
+                    <a href="{% url  'entrada_app:entry_lista' %}" class="menu-text" style="color: aliceblue; font-family: 'Oswald'">Cursos</a>
+                </li>
+                <li>
+                    
+                    {% if not user.is_anonymous %}
+                        <a class="warning button custom-rounding large" style="font-family: 'Oswald'" href="{% url 'favoritos_app:perfil' %}">Perfil</a>
+                    {% else %}
+                        <a class="success button custom-rounding large" style="font-family: 'Oswald'" href="{% url 'users_app:user-login' %}">Acceder</a>
+                    {% endif %}
+                        
+                    
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</header>

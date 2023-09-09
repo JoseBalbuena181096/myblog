@@ -1,0 +1,55 @@
+<div class="callout primary custom-rounding  " style="margin-top: 20px; margin-bottom: 0;">
+    <div class="grid-x align-center">
+        <h3 class="cell small-12 large-7">Dejanos tus comentarios:</h3>
+        <form class="cell small-12 large-7" method="post" action="{% url 'home_app:add-contact' %}">
+          {% csrf_token %}
+            <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                  <label>Nombres
+                    <input type="text" placeholder="nombres..." name="full_name", id="id_full_name" class="custom-rounding">
+                  </label>
+                </div>
+                <div class="medium-6 cell">
+                  <label>Correo
+                    <input type="email" placeholder="Correo ..." name="email" id="id_email" class="custom-rounding">
+                  </label>
+                </div>
+                <div class="medium-12 cell">
+                    <label>Mensaje
+                        <textarea placeholder="Mensaje" name="message" id="id_message" class="custom-rounding "></textarea>
+                    </label>
+                </div>
+                <div class="medium-12 cell">
+                    <button type="submit" class="large button custom-rounding success" style="font-family: 'Oswald'">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+      <div class="grid-x align-center" style="margin-top: 20px;">
+        <span  class="cell medium-5"></span>
+        <span  class="cell medium-7">
+          <h3> Contactanos aquí:</h3>
+        </span>
+      
+      <div class="grid-x align-center grid-padding-x">
+          <span class="cell medium-3">
+            <!-- <a href="https://wa.me/{{phone}}">Iniciar chat en WhatsApp</a> -->
+            <a href="https://api.whatsapp.com/send?phone={{phone}}&text=Hola Iron Makers" target="_blank"><img class="image-edit" src="http://drive.google.com/uc?export=view&id=13l4gk0i3aBSmZmPNb60lq0V37GVRe_B1" alt="whatsapp"></a>
+          </span>
+          <span class="cell medium-3">
+            <a href="{{youtube}}" target="_blank"><img class="image-edit" src="http://drive.google.com/uc?export=view&id=1yf-bsAVZXP2S2Rv6BmitQWDLr_BuyeMN" alt="youtube"></a>
+          </span>
+        <span class="cell medium-3">
+          <a href="{{tiktok}}" target="_blank" ><img class="image-edit" src="http://drive.google.com/uc?export=view&id=18oFzX7o2u56Zq4AK95HMpnDvVXtfv1PH" alt="tiktok"></a>
+        </span>
+        <span class="cell medium-3">
+          <a href="{{facebook}}" target="_blank" ><img class="image-edit" src="http://drive.google.com/uc?export=view&id=1cJo9JZbSBtuqS9AN6aw0KMWW5uI-t7dv" alt="facebook"></a>
+        </span>
+      </div>
+    </div>
+    <!-- <div class="grid-x align-center grid-padding-x" style="margin-top: 2em;">
+      <p>By Iron Makers © </p>
+    </div> -->
+    
+</div>
