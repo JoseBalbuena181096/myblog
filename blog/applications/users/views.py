@@ -4,11 +4,8 @@ from django.urls import reverse_lazy, reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
-from django.http import HttpRequest, HttpResponse
-from django import forms
 from django.views.generic import (
     View,
-    CreateView, 
     UpdateView
 )
 from django.views.generic.edit import (
